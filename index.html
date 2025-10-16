@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubuntu Web Desktop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="boot-screen" class="boot-screen active">
+    <div class="boot-logo">
+      <div class="logo-circle">
+        <span></span><span></span><span></span>
+      </div>
+      <p>ubuntu</p>
+    </div>
+    <div class="boot-loader">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="user-avatar">UB</div>
+      <h2>ubuntu</h2>
+      <form id="login-form">
+        <input id="login-password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+        <button type="submit">Log In</button>
+      </form>
+      <div class="hint">Hint: password</div>
+    </div>
+  </div>
+
+  <div id="desktop" class="desktop">
+    <div class="top-panel">
+      <div class="panel-left">
+        <button id="activities-button" class="panel-button">Activities</button>
+        <button id="app-grid-toggle" class="panel-button">Show Applications</button>
+      </div>
+      <div id="panel-clock" class="panel-clock"></div>
+      <div class="panel-right">
+        <button id="fullscreen-toggle" class="panel-icon" title="Toggle Fullscreen">&#x26F6;</button>
+        <span class="panel-icon wifi" title="Network connected">&#xA6;&#xA6;</span>
+        <span class="panel-icon sound" title="Volume 70%">&#x266B;</span>
+        <span class="panel-icon power" title="Power">&#x23FB;</span>
+      </div>
+    </div>
+
+    <div id="dock" class="dock">
+      <button class="dock-item" data-app="terminal" title="Terminal">
+        <span class="icon terminal"></span>
+        <span>Terminal</span>
+      </button>
+      <button class="dock-item" data-app="files" title="Files">
+        <span class="icon files"></span>
+        <span>Files</span>
+      </button>
+      <button class="dock-item" data-app="editor" title="Text Editor">
+        <span class="icon editor"></span>
+        <span>Editor</span>
+      </button>
+      <button class="dock-item" data-app="browser" title="Web Browser">
+        <span class="icon browser"></span>
+        <span>Browser</span>
+      </button>
+      <button class="dock-item" data-app="settings" title="Settings">
+        <span class="icon settings"></span>
+        <span>Settings</span>
+      </button>
+    </div>
+
+    <div id="desktop-area" class="desktop-area">
+      <div class="desktop-widget">
+        <h3>Getting Started</h3>
+        <p>Open the dock icons to launch Ubuntu-inspired applications.</p>
+        <ul>
+          <li>Terminal supports commands like <code>help</code>, <code>ls</code>, <code>cd</code>, <code>apt</code>, and <code>open &lt;file&gt;</code>.</li>
+          <li>Files and Terminal share the same virtual filesystem; double-click text files to edit them.</li>
+          <li>Settings lets you change the wallpaper, accent colours, and clock format.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="app-grid" class="app-grid">
+      <div class="app-grid-header">
+        <h2>Applications</h2>
+        <button id="app-grid-close">&times;</button>
+      </div>
+      <div class="app-grid-content">
+        <button class="grid-app" data-app="terminal">
+          <span class="icon terminal"></span>
+          <strong>Terminal</strong>
+          <p>Command-line shell simulator</p>
+        </button>
+        <button class="grid-app" data-app="files">
+          <span class="icon files"></span>
+          <strong>Files</strong>
+          <p>Browse your mock filesystem</p>
+        </button>
+        <button class="grid-app" data-app="editor">
+          <span class="icon editor"></span>
+          <strong>Text Editor</strong>
+          <p>Take notes in the environment</p>
+        </button>
+        <button class="grid-app" data-app="browser">
+          <span class="icon browser"></span>
+          <strong>Web Browser</strong>
+          <p>View the built-in homepage</p>
+        </button>
+        <button class="grid-app" data-app="settings">
+          <span class="icon settings"></span>
+          <strong>Settings</strong>
+          <p>Tune the look and feel</p>
+        </button>
+        <button class="grid-app" data-app="notes">
+          <span class="icon notes"></span>
+          <strong>Notes</strong>
+          <p>Sticky notes for quick thoughts</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
